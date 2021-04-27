@@ -279,7 +279,6 @@ print(classification_report(y_test, y_pred))
 
 from sklearn.metrics import recall_score
 print('le recall final est : ',recall_score(y_test, y_pred))
-evaluation(model_final(grid.best_estimator_, X_test, threshold=-1))
 
 
 
