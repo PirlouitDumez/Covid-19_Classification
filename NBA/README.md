@@ -7,3 +7,4 @@
 - The notebook "PlayersRolePrediction.ipynb" presents all the code of the prediction of a player's role, from the Exploratory Data Analysis to the modelling part.
 - The file "dashboard.py" is the Python script of an online dashboard containing the main graphs to visualize many aspects on the NBA Teams & Players. Just execute this file to access the dashboard.
 - The "requirement.txt" contains the librairies needed to run all the codes. 
+
