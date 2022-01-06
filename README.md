@@ -1,4 +1,4 @@
-# ML-Projects
+# MachineLearning Projects
 Here are the different files of my ML Projects : 
 - COVID-19 Classification problem : predict if someone is COVID-19 positive or not
 - Flat Price Prediction Regression problem : predict the price of a flat in the North of France 
