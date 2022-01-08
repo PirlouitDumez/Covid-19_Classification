@@ -221,9 +221,9 @@ y= y>treshold N×100
 
 y :True value 0 or 1
 
-` `y :Predicted value (float) 
+y :Predicted value (float) 
 
-` `treshold :Chosen value (float) 
+treshold :Chosen value (float) 
 
 
 |**Models**|**Accuracy (%)**|**Treshold**|
