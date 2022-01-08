@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Chitrakoot Web" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="University and Education Template" />
+    <meta name="description" content="Campus - University and Education Template" />
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/animate/animate.css') }}" >
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/main.css') }}">
+<!--===============================================================================================-->
+	<link rel="shortcut icon" href="img/logos/favicon.png" />
+	<link rel="apple-touch-icon" href="img/logos/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/logos/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/logos/apple-touch-icon-114x114.png" />
+
+	<!-- plugins -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/plugins.css') }}">
+
+	<!-- search css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'search/search.css') }}">
+
+	<!-- core style css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/styles.css') }}">
+</head>
+<body>
+	 <!-- start page loading -->
+	 <div id="preloader">
+        <div class="row loader">
+            <div class="loader-icon"></div>
+        </div>
+    </div>
+    <!-- end page loading -->
+	<!-- start header section -->
+	<header class="header-style1 menu_area-light">
+
+		<div class="navbar-default">
+
+			<!-- start top search -->
+			<div class="top-search bg-highlight-theme">
+				<div class="container">
+					<form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
+						<div class="input-group">
+							<span class="input-group-addon cursor-pointer">
+								<button class="search-form_submit fas fa-search font-size18 text-white" type="submit"></button>
+							</span>
+							<input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
+							<span class="input-group-addon close-search"><i class="fas fa-times font-size18 line-height-28 margin-5px-top"></i></span>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- end top search -->
+
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-lg-12">
+						<div class="menu_area alt-font">
+							<nav class="navbar navbar-expand-lg navbar-light no-padding">
+
+								<!--<div class="navbar-header navbar-header-custom">-->
+									<!-- start logo -->
+									<!--<a href="index.html" class="navbar-brand"> <img id="logo" alt="logo" src="{{url_for('static', filename='img/logos/logo.jpg')}}" ></a>-->
+									<!-- end logo -->
+								<!--</div> -->
+
+								<div class="navbar-toggler"></div>
+
+								<!-- start menu area -->
+								<ul class="navbar-nav ml-auto" id="nav" style="display: none;">
+									<li><a href="#">Home</a>
+									</li>
+									<li><a href="#">News</a>
+									<li><a href="{{ url_for('gologin') }}">Connect</a></li>
+									<li><a href="{{ url_for('gocreation') }}">Create Account</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+								<!-- end menu area -->
+
+								<!-- start atribute navigation -->
+								<div class="attr-nav sm-no-margin sm-margin-65px-right xs-margin-60px-right">
+									<ul>
+										<li class="search"><a href="#"><i class="fas fa-search"></i></a></li>
+									</ul>
+								</div>
+								<!-- end atribute navigation -->
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	<!-- end header section -->
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<div class="login100-pic js-tilt" data-tilt>
+						<img src="{{url_for('static', filename='images/LogoIsen.jpeg')}}" >
+						<img src="{{ url_for('video_feed') }}" width=120% >
+						<div class="text-center p-t-136">
+							<a class="txt2" href="{{ url_for('gohome') }}">
+								Go back home
+								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</form>
+				<form class="login100-form validate-form" method="post" action="{{ url_for('login') }}">
+					<span class="login100-form-title">
+						Member Login
+					</span>
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" id="email" placeholder="Identifiant">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button type = "submit" class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username ?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="{{ url_for('gocreation') }}">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+		<!-- start footer section -->
+	<footer class="border-top bg-white border-color-light-gray padding-70px-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 sm-margin-30px-bottom">
+					<img class="width-60 sm-width-40" src="{{url_for('static', filename='img/logos/logo-dark.jpg')}}" alt="" />
+					<p class="margin-20px-top text-dark-gray width-90 xs-width-100">Nemo enim enim voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequ magni dolores eos qui ratione.</p>
+
+					<div class="margin-20px-top footer-social-icons2">
+						<ul>
+							<li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="col-lg-4 col-md-6 sm-margin-30px-bottom">
+					<div class="padding-30px-left md-padding-25px-left sm-no-padding-left">
+						<div class="footer-title-style3 margin-15px-bottom">
+							<h3>Quick Links</h3>
+							<div class="title-border"><span class="lg"></span><span class="md"></span><span class="sm"></span></div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 no-padding-right xs-padding-15px-right">
+								<ul class="footer-list2 xs-margin-8px-bottom">
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="courses-grid.html">Courses Grid</a></li>
+									<li><a href="course-details.html">Course Details</a></li>
+									<li><a href="event.html">Events</a></li>
+									<li><a href="event-details.html">Event Details</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-6 no-padding-right xs-padding-15px-right">
+								<ul class="footer-list2">
+									<li><a href="gallery.html">Gallery</a></li>
+									<li><a href="teachers.html">Teachers</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="login.html">Login</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="padding-30px-left md-padding-25px-left sm-no-padding-left">
+						<div class="footer-title-style3 margin-15px-bottom">
+							<h3>Get in Touch</h3>
+							<div class="title-border"><span class="lg"></span><span class="md"></span><span class="sm"></span></div>
+						</div>
+						<p class="no-margin-bottom text-dark-gray">Nemo enim enim voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequr.</p>
+						<form>
+							<div class="form-group footer-subscribe2">
+								<input type="email" placeholder="Subscribe with us" id="Email1" class="form-control text-black">
+								<a class="butn theme"><span>Join</span></a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bar bg-white xs-font-size13 border-top border-color-light-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 text-left xs-text-center xs-margin-5px-bottom text-dark-gray sm-font-size13">
+						<p>© Copyright Campus 2021. All Rights Reserved.</p>
+					</div>
+					<div class="col-md-6 text-right xs-text-center text-dark-gray sm-font-size13">
+						Design and Developed by: Dumez Pirlouit, Prevost Guillaume, Lhomme Léo, Mouquet Quentin, Philippe-Taylor Corentin
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer section -->
+		
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	
+	<!-- start scroll to top -->
+    <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+    <!-- end scroll to top -->
+	
+	<!-- Java script -->
+    <script src="{{ url_for('static', filename='js/core.min.js') }}"></script>
+	
+	<!-- Serch -->
+    <script src="{{ url_for('static', filename='search/search.js') }}"></script>
+	
+    <!-- custom scripts -->
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+    <!-- all js include end -->
+
+</body>
+</html>

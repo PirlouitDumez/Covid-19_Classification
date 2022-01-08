@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/bootstrap/css/bootstrap.min.css') }}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/animate/animate.css') }}" >
+	<!--===============================================================================================-->	
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/css-hamburgers/hamburgers.min.css') }}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'vendor/select2/select2.min.css') }}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/util.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/main.css') }}">
+	<!--===============================================================================================-->
+	<link rel="shortcut icon" href="img/logos/favicon.png" />
+	<link rel="apple-touch-icon" href="img/logos/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/logos/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/logos/apple-touch-icon-114x114.png" />
+
+	<!-- plugins -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/plugins.css') }}">
+
+	<!-- search css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'search/search.css') }}">
+
+	<!-- core style css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/styles.css') }}">
+	<title>Campus v2</title>
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{{url_for('static', filename='images/LogoIsen.jpeg')}}" >
+					<img src="{{ url_for('video_feed') }}" width=120% >
+					<div class="text-center p-t-136">
+						<a class="txt2" href="{{ url_for('gohome') }}">
+							Go back home
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+				<form class="login100-form validate-form" method="post" action="{{ url_for('register') }}">
+					<span class="login100-form-title">
+						Creation Login
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" id="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="identifiant" id="identifiant" placeholder="identifiant">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button type = "submit" class="login100-form-btn">
+							Create
+						</button>
+					</div>
+					
+					<div class="text-center p-t-136">
+						<a class="txt2" href="{{ url_for('gocreation') }}">
+							Need help ?
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<!--===============================================================================================-->
+
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	
+	<!-- start scroll to top -->
+    <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+    <!-- end scroll to top -->
+
+    <!-- all js include start -->
+
+    <!-- Java script -->
+    <script src="{{ url_for('static', filename='js/core.min.js') }}"></script>
+	
+	<!-- Serch -->
+    <script src="{{ url_for('static', filename='search/search.js') }}"></script>
+	
+    <!-- custom scripts -->
+    <script src="{{ url_for('static', filename='js/main1.js') }}"></script>
+
+    <!-- all js include end -->
+
+
+</body>
+</html>
