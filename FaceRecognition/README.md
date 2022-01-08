@@ -84,10 +84,7 @@ However, with this method, one and the same head was detected several times by o
 
 |**Before nonMaxSuppression**|**After nonMaxSuppression**|
 | - | - |
-| <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nnms1.png width=300 height=300> | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nms1.png width=300 height=300> |
-| <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nnms2.png width=300 height=350> | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nms2.png width=300 height=350> |
-| <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nnms3.png width=300 height=300> | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nms3.png width=300 height=300> |
-
+ <img src=https://github.com/PirlouitDumez/ML_Projects/blob/main/FaceRecognition/img_readme/nonmaxsuppression.png> 
 
 However, we did not choose this sliding window solution because of its slowness. Indeed, it takes between 1.2 and 1.4 seconds to detect the images on the photo. Such a slowness is explained in particular by the numerous sub-images to classify (it takes more than 0.5s to classify the 324 sub-images here), and the non-max suppression algorithm, which takes between 0.1 and 0.15 seconds.
 
