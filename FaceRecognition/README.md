@@ -254,6 +254,6 @@ Each point corresponds to a face image, and each colour to a person. We notice t
 
 Our system is therefore based, in conclusion, on a deep-learning pipeline which is shown below.
 
-<img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/pika2.png>  
+<img src=https://github.com/PirlouitDumez/ML_Projects/blob/main/FaceRecognition/img_readme/conclusion.png>  
 
 2020/2021 – ISEN
