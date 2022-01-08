@@ -247,7 +247,7 @@ It is interesting to note the impact of the architecture of a model on its perfo
 In concrete terms, what does the encoder do? The encoder assigns a representative vector to each face. We therefore have "groups" of points corresponding to different people. It is possible to visualise these groups by reducing the dimension of the encoded vector to 2, and thus displaying the points on a plane. To reduce the dimension, we use a PCA (principal component analisis) of scikit-learn.
 
 Each point corresponds to a face image, and each colour to a person. We notice that the vectors corresponding to the same person are quite close. The use of the Euclidean distance to compare two persons then makes sense.
-<img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/viz1.png>
+<img src=https://github.com/PirlouitDumez/ML_Projects/blob/main/FaceRecognition/img_readme/visu2D.png>
 
 
 ### CONCLUSION
