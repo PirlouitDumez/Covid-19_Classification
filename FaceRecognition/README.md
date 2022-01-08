@@ -70,7 +70,7 @@ Let's look in detail at the recognition and detection models.
 
 
 ### Detection models
-###### ** First proposal **
+##### First proposal 
 The aim of the detection model is to extract the different heads present in a photo. For this purpose, we have tested different convolutional neural network (cnn) models. Convolutional neural networks are a type of neural network particularly adapted to images. It works by applying successive filters on the input image.
 
 The first method we implemented is based on the sliding window principle. The detection task is divided into two simpler tasks:
@@ -102,7 +102,7 @@ This is the architecture used for the classification model. The principle is to 
 In summary, the principle of sliding windows is explained below: A window goes through the image to split it into sub-images. This set of images is then given to the classifier and then to the non-max-suppressor. In this way it is possible to determine the location of a head.
 <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/pika1.png>
 
-##### ** Second proposal **
+##### Second proposal 
 
 The second solution chosen was to create a model - called a Region Proposal Network (RPN) - that determines the location of heads in an image in a single run. 
 
