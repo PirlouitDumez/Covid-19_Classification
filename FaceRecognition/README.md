@@ -56,7 +56,6 @@ The complexity of our project lies in the fact that we create everything ourselv
 
 *Sample of the datasets used*.
 
-Translated with www.DeepL.com/Translator (free version)
 
 
 |**LFW**|**CelebA**|
