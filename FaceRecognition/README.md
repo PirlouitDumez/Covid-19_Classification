@@ -1,3 +1,4 @@
+
 ## Presentation of the project
 ### Presentation of the proposal
 The aim of this project is to develop a facial recognition login system.  The main objective was to create everything ourselves, starting from scratch. We developed the architecture of the detection and facial recognition models, which we then trained. 
@@ -253,4 +254,8 @@ Our system is therefore based, in conclusion, on a deep-learning pipeline which 
 
 <img src=https://github.com/PirlouitDumez/ML_Projects/blob/main/FaceRecognition/img_readme/conclusion.png>  
 
+ ## How to use our project
+All you have to do is run the app.py file, wait for the page to load properly (use the second page that opens). Click on the "Account creation" section to create your account, enter a username and an email address, the program will take a picture of you during this time in order to add you to the users database.
+Once the account is created, you can go to the "login" section to log in, if the page refreshes when you try to log in, it is because the model predicts that you are not the person who owns the account. On the other hand, if you manage to access the home page of the site, then the model considers that you are the person associated with the account.
+You can create multiple accounts if there are several of you, but make sure you use a different username, otherwise it will overwrite the old account.
 2020/2021 – ISEN
