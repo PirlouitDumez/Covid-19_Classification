@@ -83,7 +83,7 @@ For the first part, we use a sliding window: The whole image is scanned through 
 
 However, with this method, one and the same head was detected several times by our algorithm, creating overlaps of proposals as in the figure below. It was then necessary to implement a non-maximum deletion algorithm to keep only the best regions. If a region overlaps another region more than a certain threshold (e.g. 30%), only the best rated region is kept.
 
-|**Before nonMaxSuppression**|After nonMaxSuppression**|
+|**Before nonMaxSuppression**|**After nonMaxSuppression**|
 | - | - |
 | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nnms1.png width=300 height=300> | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nms1.png width=300 height=300> |
 | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nnms2.png width=300 height=350> | <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/nms2.png width=300 height=350> |
@@ -92,16 +92,19 @@ However, with this method, one and the same head was detected several times by o
 
 However, we did not choose this sliding window solution because of its slowness. Indeed, it takes between 1.2 and 1.4 seconds to detect the images on the photo. Such a slowness is explained in particular by the numerous sub-images to classify (it takes more than 0.5s to classify the 324 sub-images here), and the non-max suppression algorithm, which takes between 0.1 and 0.15 seconds.
 
-####### *FACE CLASSIFIER*
+###### *FACE CLASSIFIER*
+
 This is the architecture used for the classification model. The principle is to progressively reduce the dimension of the image through layers of max-Pooling and layers of convolutions. Then the actual decision is made by the three dense layers. The two perceptrons in the last layer are each worth the probability that the image is a head or not.
 <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/model0.png>
 
 
-####### *SLIDING WINDOWS*
+###### *SLIDING WINDOWS*
+
 In summary, the principle of sliding windows is explained below: A window goes through the image to split it into sub-images. This set of images is then given to the classifier and then to the non-max-suppressor. In this way it is possible to determine the location of a head.
 <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/pika1.png>
 
-###### ** Second proposal.
+##### ** Second proposal.
+
 The second solution chosen was to create a model - called a Region Proposal Network (RPN) - that determines the location of heads in an image in a single run. 
 
 The original idea was to train a model to propose regions of interest that might contain a head, and then send this data to the classifier, thereby reducing the number of sub-images from 324 to a mere ten. However, the model proved to be more efficient than expected, so we were able to remove the classifier behind and keep only this RPN. We trained this model for four full days on the workstation of the ISEN Info club, on a lot of data (more than 25000 images). This quantity of data allowed us to avoid overfitting (i.e. overlearning). 
@@ -125,7 +128,8 @@ As this method is more accurate and faster (it takes 0.14 to 0.17s to process an
 
 
 
-####### *REGION PROPOSAL NETWORK*
+###### *REGION PROPOSAL NETWORK*
+
 This network uses a U-net type architecture. This means that it will progressively decrease the size of the image thanks to max-pooling, and then increase the size of the image in stages. The specificity of this network is that it has residual connections between the encoded images and the decoded images of the same size. These connections ensure that no information is lost through image compression and that well-defined boundaries are obtained. 
 <img src=https://github.com/Prevost-Guillaume/Facial-recognition/blob/main/images/model1.png>
 ### Recognition models
