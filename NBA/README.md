@@ -6,6 +6,6 @@
 - The "NBA_visualization.py" file is the code to display all the graphics to visualize different aspects on the NBA Teams and Players.
 - The notebook "PlayersRolePrediction.ipynb" presents all the code of the prediction of a player's role, from the Exploratory Data Analysis to the modelling part.
 - The pdf "Rapport_ProjetNBA.pdf" is the report of this project, written in French, with detailled analysis for every graphs (there is more graphics here than in the dashboard)
-- The file "dashboard.py" is the Python script of an online dashboard containing the main graphs to visualize many aspects on the NBA Teams & Players. Just execute this file to access the dashboard.
+- The file "dashboard.py" is the Python script of an online dashboard containing the main graphs to visualize many aspects on the NBA Teams & Players. Just execute this file to access the dashboard. You can find this dashboard online at the following link : http://guillaume.pythonanywhere.com/
 - The "requirement.txt" contains the librairies needed to run all the codes. 
 
